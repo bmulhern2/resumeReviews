@@ -2,5 +2,7 @@
     "name": "resumeReviews",
     "author": "Brendan Mulhern",
     "private": true,
-    "dependencies": {}
+    "dependencies": {
+        "heroku": "^7.39.0"
+    }
 }
