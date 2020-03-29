@@ -1,0 +1,29 @@
+<html>
+<head>
+<title></title>
+<style>
+    * {
+        margin: -10px;
+    } 
+</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body class="bg-success">
+<nav class="bg-danger text-center">
+<h1 class="text-primary">Resume Reviews</h1>
+<a href="/add">Add</a>
+</nav>
+<div class="text-center" id="output">
+</div>
+<script>
+// Loop over array and output to HTML
+    $.get("/api", function(person) {
+        $.each(person, function(index, val) { 
+            var out = "<div class='bg-success' id='object'><h1 class='text-danger'>" + val.company + "</h1>" + "<h1 class='text-warning'>" + val.review + "</h1></div><hr>";
+            $('#output').append(out);
+    });
+    });
+</script>
+</body>
+</html>
